@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{%  include 'bootstrap.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style>
+    .bhaskar{
+
+}
+
+</style>
+<body style=" background-image: url({% static 'images/village.jpg' %});
+  background-position:center;
+  padding: 15px;">
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-md-2">
+               <h1 class="text-center"
+                   style="margin-right:10%;
+                   margin-left:35%;
+                   margin-bottom:-40%;
+                   margin-top: 40%;
+                    font-family: 'Arial Rounded MT Bold';
+                    font-style: italic;" >Login.....</h1>
+                <input type="text" name="username" placeholder="username" class="form-control"style="margin-right:10%; margin-left:35%; margin-bottom:-10%;margin-top: 40%;">
+                <input type="password" name="password" placeholder="password" class="form-control"style="margin-right:10%; margin-left:35%; margin-bottom: 1%;margin-top: 20%;">
+                <center>
+                    <input type="submit" value="login" class="btn btn-success">
+                    <input type="reset" value="cancel" class="btn btn-warning">
+
+                    <p style="font-style: italic; font-size: medium; color: red; margin-bottom: -1%; position: relative;"  > don't have account ? then </p> <pre><a href="{% url 'register' %}">click here</a></pre>
+                    <pre><a href="{% url 'reset_password' %}"> forget password</a></pre>
+
+                </center>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+
+</body>
+</html>

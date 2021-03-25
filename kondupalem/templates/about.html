@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about-me </title>
+</head>
+{% include 'bootstrap.html' %}
+{% include 'navbar.html' %}
+{% block content %}
+{% endblock %}
+<body style="background-color:skyblue;">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <img src="{% static 'images/pic.jpg' %}" alt="Norway" style="float:left;width:10%;height:30%;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-8">
+                <h4><b>Career Objective:</b></h4>
+                <p>To pursue a challenging career and be part of a progressive organization
+                    that gives scope to enhance my knowledge, skills and
+                    to contribute to the overall growth of the organization.</p>
+                <h4>Techinical Summery:</h4>
+                <p>
+                    <b>PYTHON:</b><br>
+
+
+                    •	Proficiency in using data structure (List, String, Set, Tuple, Dictionary).
+
+                    •	Good knowledge in using function writing inside code a function based on program.
+
+                    •	Good knowledge in working with object oriented programing concepts.
+
+                    •	Implemented exception handling and file handling concepts in programing.
+
+                    •	Proficient in using finial program language LAMBDA, MAP, FILTER.
+
+                    •	Having a knowledge on parsing techniques such as JSON and PICKEL.
+
+                    •	Knowledge on advanced concept called DECODERS, ITERATORS and
+                    GENERATORS.<br>
+
+                    <b>Django:</b><br>
+
+                    •	Proficient in working with MVT architecture.
+
+                    •	Good knowledge in working with URL to interacts with database.
+
+                    •	Worked with admin panel customization and user registration model.
+
+                    •	Good knowledge in using SESSION, FILTER and JINJA tags.
+
+                    •	Efficient in using function based views as well as class based views.
+
+                    •	Used login logout and template inheritance concept in our <br>
+
+                   <b>SQL:</b><br>
+
+                    •	Proficient in using oracle 10g software.
+
+                    •	Expertize in DDL, DML, TCL, DCL, DQL.
+
+                    •	Good knowledge about join’s.
+
+                    •	Good knowledge on working with subquery, normalization, single row function.
+                    •	Good understanding with the relationships and ER-diagram.<br>
+                    <b>HTML:</b><br>
+                    •	Good knowledge in HTML5
+
+                    •	Expertise in using tags<br>
+                    <b>CSS:</b><br>
+                    •	Experience in using inline, external and internal style sheet and documentary.
+
+                    •	Implement CSS for tag level, attribute level and block level.
+</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div style="padding:180px; margin-left:-159px; margin-top:-537px; ">
+       <b> <p>T BHASKAR</p>
+    <p style="margin-top:-18px;">&nbsp &nbsp MCA</p>
+    <p style="margin-top:-18px;">SVU,Tirupati</p>
+   </div>
+
+
+
+</form>
+
+
+</body>
+<footer >
+    <div style="background-color:black; margin-top:130px; " class="container">
+        <div class="row">
+           &nbsp &nbsp &nbsp &nbsp <span class="glyphicon glyphicon-phone" style="color:white;">&nbsp &nbsp<b>+91 7674870947<br>
+                <br><br>
+
+            &nbsp &nbsp<span class="glyphicon glyphicon-map-marker" style="color:white;">&nbsp &nbsp<b>savithripuram(kondupalem)<br>
+                <br><br><br>
+           &nbsp &nbsp <span class="glyphicon glyphicon-envelope" style="color:white;">&nbsp &nbsp<b>thatiparthibhaskar809@gmail.com<br>
+                    <br><br><br><br>
+
+            </span>
+        </div>
+
+    </div>
+</footer>
+</html>

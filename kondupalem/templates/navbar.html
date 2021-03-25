@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>li{
+    display: inline;
+    color: black;
+    }</style>
+<body>
+{% csrf_token %}
+{% block content %}
+<div class="navbar">
+    <div class="nav navbar">
+        <div class="container">
+            <div class="row">
+                <ul class="bg bg-warning">
+                    <li> <a href="{% url 'profile' %}">
+                        <span class="glyphicon glyphicon-home"> Home</span></a>
+                     </li> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <li> <a href="{% url 'about' %}">About</a></li>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <li> <a href="{% url 'contact' %}">contact</a></li>
+
+
+                     <li style="margin-left:1100px; margin-bottom:100px;"><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out">Logout</span> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

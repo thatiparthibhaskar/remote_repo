@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+<head>
+    <title></title>
+    {% include 'bootstrap.html' %}
+</head>
+<style>
+    .bhaskar{
+        margin-left:30%;
+        margin-right:-14%;
+        margin-bottom: 20%;
+        margin-top: 5%;
+
+    }
+</style>
+<body style="background-image: url({% static 'images/village.jpg'%}); background-repeat: repeat;">
+<div class="bhaskar">
+    <h1 style="color: black; font-style: italic; font-family: 'Arial Rounded MT Bold';">Register</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-3">
+                <form method="POST" class="fieldBox" style="color: aqua;" class="form-control">
+                    {% csrf_token %}
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="Enter the name" class="form-control">
+                    <label>Last Name:</label>
+                    <input type="text" name="lastname" placeholder="Enter the last name" class="form-control">
+
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter the mail" class="form-control">
+                    <label>User Name:</label>
+                    <input type="text" name="username" placeholder="Enter the username" class="form-control">
+                    <label>password:</label>
+                    <input type="password" name="password" placeholder="Enter the password" class="form-control">
+                    <input type="submit" value="Register" class="btn btn-success">
+                    <input type="reset" value="Cancel" class="btn btn-danger"> <br>
+
+                    <a href="{% url 'login' %}" style="color: gold;">already have an account?</a>
+                </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
